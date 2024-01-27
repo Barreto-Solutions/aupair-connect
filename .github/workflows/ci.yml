@@ -9,5 +9,5 @@ jobs:
       - uses: actions/setup-node@v4 # repository/actionName
         with:
           node-version: 18 # Setando versao do GO
-      - run: npm run test # Rodando comandos
+      - run: npm test # Rodando comandos
       - run: node src/math.js
