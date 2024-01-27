@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "type": "module",
   "scripts": {
     "test": "jest"
   },
@@ -16,5 +15,9 @@
   "devDependencies": {
     "jest": "^29.7.0",
     "standard": "^17.1.0"
+  },
+  "engines": {
+    "node": ">=18",
+    "npm": ">=9"
   }
 }
