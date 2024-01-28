@@ -8,10 +8,13 @@ on:
 jobs:
   check-application:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node: [ 14, 16, 18 ]
     steps:
       - uses: actions/checkout@v2 
       - uses: actions/setup-node@v4 
         with:
-          node-version: 18 
+          node-version: ${{ matrix.node }}
       - run: npm test 
       - run: node src/math.js
