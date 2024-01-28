@@ -1,13 +1,16 @@
 name: ci-nodejs-workflow
-on: [push] # Event
+on: 
+  pull_request:
+    branches:
+      - develop
 
 jobs:
   check-application:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2 # Baixa os arquivos do push no ubuntu
-      - uses: actions/setup-node@v4 # repository/actionName
+      - uses: actions/checkout@v2 
+      - uses: actions/setup-node@v4 
         with:
-          node-version: 18 # Setando versao do GO
-      - run: npm test # Rodando comandos
+          node-version: 18 
+      - run: npm test 
       - run: node src/math.js
