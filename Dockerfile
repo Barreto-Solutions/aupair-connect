@@ -3,7 +3,7 @@ FROM node:18
 COPY ./ /app
 
 RUN cd /app \
-    && npm ci
+    && npm install
 
 WORKDIR /app
 
